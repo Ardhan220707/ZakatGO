@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZakatGO</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+  <div class="container-fluid p-0 w-100">
+    <nav class="navbar navbar-expand-sm bg-body-tertiary shadow fixed-top shadow ">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="assets/img/logo-zakatGo.jpg" alt="Logo ZakatGO" width="50" height="50" class="rounded-5 me-2">
+          <span class="fw-bold text-success">ZakatGO</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-success fw-semibold" href="#beranda">Beranda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success fw-semibold" href="#kalkulator">Kalkulator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-success fw-semibold" href="#tentang">Tentang</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="container my-5" id="beranda">
+      <div class="text-center mb-3">
+        <h1 class="text-success fw-bold ">Hitung Zakat Maal Anda. Cepat, Mudah, dan Akurat.</h1>
+        <p class="text-dark fw-semibold" style="font-size: 13px;">Selamat datang di ZakatGO. Gunakan kalkulator
+          sederhana ini untuk menghitung kewajiban zakat penghasilan, emas, dan tabungan Anda sesuai syariat.</p>
+        <div>
+          <a href="#kalkulator" class="btn btn-success">Mulai Hitung <i class="bi bi-calculator text-light"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5">
+      <h3 class="text-success text-center fw-bold mb-2">Keunggulan ZakatGO</h3>
+
+      <div class="row g-3 text-center justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card mx-auto w-75 shadow" style="width: 15rem;">
+            <i class="bi bi-1-square-fill fs-1 text-success mt-3" style="font-size: 6rem;"></i>
+            <div class="card-body">
+              <img src="assets/img/1.png" class="img-fluid" alt="Gambar Vector" style="width: 100%; height: auto;">
+              <p class="card-text">Panduan Terverifikasi MUI</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card mx-auto w-75 shadow" style="width: 15rem;">
+            <i class="bi bi-2-square-fill fs-1 text-success mt-3" style="font-size: 6rem;"></i>
+            <div class="card-body">
+              <img src="assets/img/3.png" class="img-fluid" alt="Gambar Vector" style="width: 100%; height: auto;">
+              <p class="card-text">Zakat Bersih Bebas Utang"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card mx-auto w-75 shadow" style="width: 15rem;">
+            <i class="bi bi-3-square-fill fs-1 text-success mt-3" style="font-size: 6rem;"></i>
+            <div class="card-body">
+              <img src="assets/img/2.png" class="img-fluid" alt="Gambar Vector" style="width: 100%; height: auto;">
+              <p class="card-text">Hitung Mudah, Cepat & Akurat</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="card mx-auto w-75 shadow" style="width: 15rem;">
+            <i class="bi bi-4-square-fill fs-1 text-success mt-3" style="font-size: 6rem;"></i>
+            <div class="card-body">
+              <img src="assets/img/4.png" class="img-fluid" alt="Gambar Vector" style="width: 100%; height: auto;">
+              <p class="card-text">Nisab Terkini Real-Time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="kalkulator">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-success">🕌 Kalkulator Zakat Maal</h2>
+        <p class="text-muted">Isi data harta Anda, sistem akan menghitung total dan zakat secara otomatis.</p>
+      </div>
+
+      <div class="card shadow p-4">
+        <form id="zakatForm">
+          <div class="row g-3">
+
+            <!-- Input Emas -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Jumlah Emas (gram)</label>
+              <input type="number" id="emas" class="form-control" placeholder="Contoh: 100" min="0" step="0.01">
+              <input type="number" id="hargaEmas" class="form-control" hidden>
+            </div>
+            <div class="form-text text-muted">
+              Harga emas per-gram Rp.1.200.000
+            </div>
+
+            <!-- Input Perak -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Jumlah Perak (gram)</label>
+              <input type="number" id="perak" class="form-control" placeholder="Contoh: 500" min="0" step="0.01">
+              <input type="number" id="hargaPerak" class="form-control" hidden>
+            </div>
+            <div class="form-text text-muted">
+              Harga perak per-gram Rp.15.000
+            </div>
+
+            <!-- Input Uang -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Jumlah Uang / Tabungan / Investasi (Rp)</label>
+              <input type="number" id="uang" class="form-control" placeholder="Contoh: 100000000" min="0">
+            </div>
+
+            <!-- Hutang -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Jumlah Hutang(Rp)</label>
+              <input type="number" id="hutang" class="form-control" placeholder="Jika tidak ada, isi 0" min="0">
+            </div>
+
+            <!-- Sudah 1 Tahun -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Apakah harta ini sudah dimiliki lebih dari 1 tahun?</label>
+              <select id="sudahSetahun" class="form-select" required>
+                <option value="belum">Belum</option>
+                <option value="sudah">Sudah</option>
+              </select>
+            </div>
+
+            <!-- Total Harta -->
+            <div class="col-md-6">
+              <label class="form-label fw-semibold">Total Harta (Rp)</label>
+              <input type="text" id="totalHarta" class="form-control bg-light" readonly>
+            </div>
+
+            <!-- Tombol Hitung -->
+            <div class="col-12 text-center mt-3">
+              <button type="submit" class="btn btn-success px-4">
+                <i class="bi bi-calculator"></i> Hitung Zakat
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Hasil -->
+      <div id="hasilCard" class="card shadow mt-4 p-4 text-center border-success" style="display: none;">
+        <h4 class="text-success fw-bold mb-3">💰 Hasil Perhitungan Zakat Maal</h4>
+        <p id="hasilNisab" class="fw-semibold"></p>
+        <p id="hasilStatus" class="fw-semibold"></p>
+        <p id="hasilZakat" class="fw-bold fs-5 text-success"></p>
+      </div>
+    </section>
+
+    <section class="container my-5" id="tentang">
+      <div class="row text-center">
+        <h3 class="fw-bold text-success my-2">Tentang ZakatGO</h3>
+        <div class="card mx-auto shadow" style="width: 25rem;">
+          <div class="card-body">
+            <i class="text-muted">ZakatGO dibuat dengan misi sederhana: memudahkan setiap Muslim menunaikan
+              kewajiban zakatnya. Kami percaya bahwa teknologi dapat menjembatani niat baik dengan pelaksanaan ibadah
+              yang tepat. Nama 'GO' mencerminkan komitmen kami pada proses yang cepat, dinamis, dan tidak
+              berbelit-belit.</i>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center my-4">
+        <h3 class="fw-bold text-success my-2">Dasar Perhitungan</h3>
+        <div class="card mx-auto shadow" style="width: 25rem;">
+          <div class="card-body">
+            <i class="text-muted">Untuk menjaga transparansi dan akuntabilitas syariat, kalkulator ini beroperasi
+              berdasarkan prinsip berikut:</i>
+            <ul style="text-align: justify;">
+              <li><strong>Nisab : </strong> Kami menggunakan standar nisab yang setara dengan harga <strong>85 gram emas
+                  murni</strong>. Nilai nisab ini akan diperbarui secara berkala. </li>
+              <li><strong>Kadar Zakat :</strong> Jumlah zakat yang wajib dikeluarkan adalah <strong>2.5%</strong> dari
+                total harta yang telah memenuhi nisab.</li>
+              <li><strong>Haul : </strong> Perhitungan ini berlaku untuk harta yang telah Anda miliki selama satu tahun
+                penuh (haul).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row text-center my-4">
+        <h3 class="fw-bold text-success my-2">Catatan Penting</h3>
+        <div class="card mx-auto shadow" style="width: 25rem;">
+          <div class="card-body">
+            <i>ZakatGO adalah aplikasi karya orisinal yang berfungsi sebagai <strong>alat bantu estimasi</strong>. Kami
+              telah berusaha semaksimal mungkin untuk memberikan perhitungan yang akurat. Namun, untuk keputusan final
+              dan penyaluran zakat, kami sangat menyarankan Anda untuk berkonsultasi kembali dengan Lembaga Amil Zakat
+              (LAZ) resmi atau ahli fiqih terpercaya di lingkungan Anda.</i>
+            <i>Dibuat dengan ❤️ menggunakan HTML, Bootstrap, dan JavaScript.</i>
+          </div>
+        </div>
+      </div>
+
+
+    </section>
+
+  </div>
+
+  <!-- Tambahkan di akhir body -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
